@@ -50,6 +50,12 @@ public class Main {
                 System.out.println("Nie trafiles nic mordo. Probuj dalej switch");
         }
 
+        // petla for
+        for (int i = 0; i < 10; i++) {
+            System.out.println("Mordo i ma wartość " + (i + 1));
+                    }
+        // koniec petli for
+
         System.out.println(number);
         System.out.println(sum);
         System.out.println(someVariable++);
