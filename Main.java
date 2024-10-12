@@ -19,11 +19,16 @@ public class Main {
             boolean boolValue1 = true;
             boolean boolValue2 = false;
 
+//            rzutowanie - casting
+
+        double n = 99.99;
+        int m = (int)  Math.round(n);
 
         System.out.println(number);
         System.out.println(sum);
         System.out.println(someVariable++);
         System.out.println(++someVariable);
-        System.out.print(boolValue1 || boolValue2);
+        System.out.println(boolValue1 || boolValue2);
+        System.out.println(m);
     }
 }
