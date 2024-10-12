@@ -1,8 +1,23 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-            System.out.println("Hello world");
 
-            int number = 5;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("To jest program sprawdzający czy podana przez Ciebie liczba jest parzysta!");
+        System.out.println("Podaj Liczbę:");
+        int inputNumber = scanner.nextInt();
+
+        if (inputNumber % 2 == 0) {
+            System.out.println("Wybrana przez Ciebie liczba " + inputNumber + "jest liczbą parzystą");
+        } else {
+            System.out.println("Wybrana przez Ciebie liczba " + inputNumber + "jest liczbą parzystą");
+        }
+
+    }
+//            System.out.println("Hello world");
+
+/*            int number = 5;
             number = 3;
 
             number += 10;
@@ -62,5 +77,5 @@ public class Main {
         System.out.println(++someVariable);
         System.out.println(boolValue1 || boolValue2);
         System.out.println(m);
-    }
+    }*/
 }
