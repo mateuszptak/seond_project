@@ -13,7 +13,17 @@ public class Main {
 
             float sum = firstNumber / secondNumber;
 
+
+            int someVariable = 5;
+
+            boolean boolValue1 = true;
+            boolean boolValue2 = false;
+
+
         System.out.println(number);
         System.out.println(sum);
+        System.out.println(someVariable++);
+        System.out.println(++someVariable);
+        System.out.print(boolValue1 || boolValue2);
     }
 }
