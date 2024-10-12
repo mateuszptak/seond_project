@@ -24,6 +24,19 @@ public class Main {
         double n = 99.99;
         int m = (int)  Math.round(n);
 
+//        warunek if
+
+        int inputNumber = 7;
+        int  testNumber = 7;
+        if (inputNumber > testNumber) {
+            System.out.println("Liczba " + inputNumber + " jest wieksza od " + testNumber);
+        } else if (inputNumber < testNumber) {
+            System.out.println("Liczba " + inputNumber + " jest mniejsza od " + testNumber);
+        } else {
+            System.out.println("Liczby są równe sobie");
+                    }
+
+
         System.out.println(number);
         System.out.println(sum);
         System.out.println(someVariable++);
