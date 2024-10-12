@@ -1,8 +1,19 @@
 public class Main {
     public static void main(String[] args) {
-        var i = 0;
-        for (i=0; i < 100; i++) {
-            System.out.println("Hello world " + (i + 1));
-        }
+            System.out.println("Hello world");
+
+            int number = 5;
+            number = 3;
+
+            number += 10;
+            number = number + 10;
+
+            float firstNumber = 10;
+            float secondNumber = 7;
+
+            float sum = firstNumber / secondNumber;
+
+        System.out.println(number);
+        System.out.println(sum);
     }
 }
