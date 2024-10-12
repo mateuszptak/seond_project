@@ -36,6 +36,19 @@ public class Main {
             System.out.println("Liczby są równe sobie");
                     }
 
+        // instrukcja switch - inna instrukcja waunkowa
+
+        int somethingNew = 8;
+        switch (somethingNew) {
+            case 1:
+                System.out.println("1");
+                break;
+            case 9:
+                System.out.println("9 switch");
+                break;
+            default:
+                System.out.println("Nie trafiles nic mordo. Probuj dalej switch");
+        }
 
         System.out.println(number);
         System.out.println(sum);
