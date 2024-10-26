@@ -37,6 +37,8 @@ public class Zadanie4 {
                 result = num1 / num2;
                 System.out.println(result);
                 break;
+            default:
+                System.out.println("Błędcny znak");
         }
     }
 }
