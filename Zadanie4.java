@@ -7,7 +7,8 @@ public class Zadanie4 {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Jakie działanie arytmetyczne chcesz dokonać? (+, -, *, /)");
-        String sign = scanner.nextLine();
+        // .next przyjmuje ciag znakow czyli wszystko
+        String sign = scanner.next();
 
         System.out.println("Podaj pierwsza liczbe");
         int num1 = scanner.nextInt();
