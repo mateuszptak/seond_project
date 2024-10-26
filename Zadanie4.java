@@ -1,3 +1,4 @@
+import java.math.BigDecimal;
 import java.util.Scanner;
 
 public class Zadanie4 {
@@ -15,6 +16,7 @@ public class Zadanie4 {
 
         System.out.println("Podaj drugą liczbę");
         int num2 = scanner.nextInt();
+        scanner.close();
 
         int result;
 
