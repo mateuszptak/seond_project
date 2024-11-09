@@ -7,6 +7,10 @@ public class Test {
 //        utils.inputINtObject("Siema, ile dasz mi szlugów?");
         Student student = new Student("Mateusz", "Ptak", 11);
         System.out.println(student);
+
+        System.out.println(student.getAge());
+
+        System.out.println(student.getFullName());
     }
 }
 
@@ -19,5 +23,21 @@ class Student {
         this.name = name;
         this.surname = surname;
         this.age = age;
+    }
+
+    public String getName(){
+        return name;
+    }
+
+    public String getSurname(){
+        return surname;
+    }
+
+    public int getAge(){
+        return age;
+    }
+
+    public String getFullName() {
+        return name + " " + surname;
     }
 }
