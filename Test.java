@@ -37,6 +37,10 @@ class Car {
     public String getMake(){
         return make;
     }
+
+    public void setColor(String color){
+        this.color = color;
+    }
 }
 
 
