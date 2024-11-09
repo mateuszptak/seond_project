@@ -9,15 +9,13 @@ public class Exercise2 {
        int c = input("Podaj trzecia liczbe: ");
 
         // za pomoca biblioteki Math
-        int max = Math.max(Math.max(a, b),c);
-        int min= Math.min(Math.min(a, b),c);
+        int max = getMax(a, b, c);
+        int min = getMin(a, b, c);
 
         // za pomoca if do zrobienia mati
 
 
-
-        System.out.println("Najmniejsza liczba to " + min);
-        System.out.println("Największa liczba to " + max);
+        showResult(min, max);
 
 //        if (a > b && b > c) {
 //            System.out.println(a + " " + c);
@@ -32,6 +30,21 @@ public class Exercise2 {
 //        } else {
 //            System.out.println(c + " " + b);
 //        }
+    }
+
+    private static void showResult(int min, int max) {
+        System.out.println("Najmniejsza liczba to " + min);
+        System.out.println("Największa liczba to " + max);
+    }
+
+    private static int getMin(int a, int b, int c) {
+        int min= Math.min(Math.min(a, b), c);
+        return min;
+    }
+
+    private static int getMax(int a, int b, int c) {
+        int max = Math.max(Math.max(a, b), c);
+        return max;
     }
 
     static int input(String message){

@@ -4,19 +4,22 @@ import java.util.Scanner;
 public class Zadanie4 {
     public static void main(String[] args) {
         System.out.println("PROSTY KALKULATOR");
-
         Scanner scanner = new Scanner(System.in);
 
         String signMethod = calcSign("Jakie działanie arytmetyczne chcesz dokonać? (+, -, *, /)");
 
         int num1 = input("Podaj pierwsza liczbę: ");
-
         int num2 = input("Podaj druga liczbę: ");
 
         scanner.close();
 
         int result;
 
+        switchStatement(signMethod, num1, num2);
+    }
+
+    private static void switchStatement(String signMethod, int num1, int num2) {
+        int result;
         switch (signMethod) {
             case "+":
                result = num1 + num2;
@@ -39,6 +42,16 @@ public class Zadanie4 {
         }
     }
 
+    static String calcSign(String message) {
+        try {
+            System.out.println(message);
+            Scanner scanner = new Scanner(System.in);
+            return scanner.next();
+        } catch (InputMismatchException error) {
+            System.out.println(error);
+        }
+        return "";
+    }
 
     static int input(String message){
         try {
@@ -51,16 +64,7 @@ public class Zadanie4 {
         return 0;
     }
 
-    static String calcSign(String message) {
-        try {
-            System.out.println(message);
-            Scanner scanner = new Scanner(System.in);
-            return scanner.next();
-        } catch (InputMismatchException error) {
-            System.out.println(error);
-        }
-        return "";
-    }
+
 }
 
 

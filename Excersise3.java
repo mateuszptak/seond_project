@@ -1,34 +1,29 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Excersise3 {
     public static void main(String[] args) {
+        double price = input("Podaj cene towaru od 100 do 10k PLN:");
+        double rate = input("Podaj liczbe rat od 6 - 48:");
 
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Podaj cene towaru od 100 do 10k PLN:");
-        double price = scanner.nextDouble();
-
-        System.out.println("Podaj liczbe rat od 6 - 48:");
-        int rate = scanner.nextInt();
-
-        scanner.close();
-
-        double multiplier;
-        double interest = 0;
-        double total = 0;
-        double rateValue = 0;
-
-
-        if (rate >= 6 && rate <= 12) {
-            multiplier = 0.025;
-
-        } else if (rate > 12 && rate <= 24) {
-            multiplier = 0.05;
+        if (isParameterInvalid(price, rate)) {
+            System.out.println("Wprowadziłeś złe dane");
         } else {
-            multiplier = 0.1;
+            double multiplier;
+            multiplier = getMultiplier(rate);
+            calculateAndShowReslut(price, multiplier, rate);
         }
 
+    }
 
+    private static boolean isParameterInvalid(double price, double rate) {
+        return price < 100 || price > 10000 || rate < 6 || rate > 48;
+    }
+
+    private static void calculateAndShowReslut(double price, double multiplier, double rate) {
+        double rateValue;
+        double total;
+        double interest;
         interest = price * multiplier;
         total = price + interest;
         rateValue = total / rate;
@@ -38,6 +33,30 @@ public class Excersise3 {
         System.out.println("Odsetki: " + interest);
         System.out.println("Łączny koszt: " + total);
         System.out.println("Wysokość raty: " + rateValue);
+    }
+
+    private static double getMultiplier(double rate) {
+        double multiplier;
+        if (rate >= 6 && rate <= 12) {
+            multiplier = 0.025;
+        } else if (rate > 12 && rate <= 24) {
+            multiplier = 0.05;
+        } else {
+            multiplier = 0.1;
+        }
+        return multiplier;
+    }
+
+
+    static double input(String message){
+        try {
+            System.out.println(message);
+            Scanner scanner = new Scanner(System.in);
+            return scanner.nextInt();
+        } catch (InputMismatchException e) {
+            System.out.println(e);
+        }
+        return 0;
     }
 }
 
