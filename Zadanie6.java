@@ -8,10 +8,10 @@ public class Zadanie6 {
 
         if (income < 85_528) {
             double tax18 = (income * 0.18) - 556.02;
-            System.out.println("Podatek do zapłaty wybnosi: " + tax18);
+            System.out.println("Podatek do zapłaty wybnosi: " + (tax18 < 0 ? 0 : tax18));
         } if (income >= 85_528) {
             double tax32 = ((income - 85_528) * 0.32 + 14_839.02);
-            System.out.println("Podatek do zapłaty wybnosi: " + tax32);
+            System.out.println("Podatek do zapłaty wybnosi: " + (tax32 < 0 ? 0 : tax32));
         }
     }
 }
