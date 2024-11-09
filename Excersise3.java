@@ -3,10 +3,10 @@ import java.util.Scanner;
 
 public class Excersise3 {
     public static void main(String[] args) {
-        double price = input("Podaj cene towaru od 100 do 10k PLN:");
-        double rate = input("Podaj liczbe rat od 6 - 48:");
+        double price = Utils.input("Podaj cene towaru od 100 do 10k PLN:");
+        double rate = Utils.input("Podaj liczbe rat od 6 - 48:");
 
-        if (isParameterInvalid(price, rate)) {
+        if (Utils.isParameterInvalid(price, rate)) {
             System.out.println("Wprowadziłeś złe dane");
         } else {
             double multiplier;
@@ -16,9 +16,7 @@ public class Excersise3 {
 
     }
 
-    private static boolean isParameterInvalid(double price, double rate) {
-        return price < 100 || price > 10000 || rate < 6 || rate > 48;
-    }
+
 
     private static void calculateAndShowReslut(double price, double multiplier, double rate) {
         double rateValue;
@@ -48,16 +46,7 @@ public class Excersise3 {
     }
 
 
-    static double input(String message){
-        try {
-            System.out.println(message);
-            Scanner scanner = new Scanner(System.in);
-            return scanner.nextInt();
-        } catch (InputMismatchException e) {
-            System.out.println(e);
-        }
-        return 0;
-    }
+
 }
 
 // W sklepie AGD oferowana jest sprzedaz ratalna. Napisz program umozliwiajacy wyliczneie wysokosci miesiecznej raty za

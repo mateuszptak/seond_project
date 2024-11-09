@@ -3,10 +3,9 @@ import java.util.Scanner;
 
 public class Exercise2 {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-       int a = input("Podaj pierwsza liczbe: ");
-       int b = input("Podaj druga liczbe: ");
-       int c = input("Podaj trzecia liczbe: ");
+       int a = Utils.input("Podaj pierwsza liczbe: ");
+       int b = Utils.input("Podaj druga liczbe: ");
+       int c = Utils.input("Podaj trzecia liczbe: ");
 
         // za pomoca biblioteki Math
         int max = getMax(a, b, c);
@@ -47,16 +46,7 @@ public class Exercise2 {
         return max;
     }
 
-    static int input(String message){
-        try {
-            System.out.println(message);
-            Scanner scanner = new Scanner(System.in);
-            return scanner.nextInt();
-        } catch (InputMismatchException e) {
-            System.out.println(e);
-        }
-        return 0;
-    }
+
 }
 
 // wczytac od uzytkownika 3 liczby i wypisac na ekran najmniejsza i najwieksza z tych liczb

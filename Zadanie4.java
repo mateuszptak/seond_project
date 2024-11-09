@@ -8,8 +8,8 @@ public class Zadanie4 {
 
         String signMethod = calcSign("Jakie działanie arytmetyczne chcesz dokonać? (+, -, *, /)");
 
-        int num1 = input("Podaj pierwsza liczbę: ");
-        int num2 = input("Podaj druga liczbę: ");
+        int num1 = Utils.inputIntStatic("Podaj pierwsza liczbę: ");
+        int num2 = Utils.inputIntStatic("Podaj druga liczbę: ");
 
         scanner.close();
 
@@ -53,16 +53,6 @@ public class Zadanie4 {
         return "";
     }
 
-    static int input(String message){
-        try {
-            System.out.println(message);
-            Scanner scanner = new Scanner(System.in);
-            return scanner.nextInt();
-        } catch (InputMismatchException e) {
-            System.out.println(e);
-        }
-        return 0;
-    }
 
 
 }
