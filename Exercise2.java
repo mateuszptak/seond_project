@@ -1,15 +1,12 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Exercise2 {
     public static void main(String[] args) {
-
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Podaj pierwsza liczbe całkowita:");
-        int a = scanner.nextInt();
-        System.out.println("Podaj druga liczbe całkowita:");
-        int b = scanner.nextInt();
-        System.out.println("Podaj trzecia liczbe całkowita:");
-        int c = scanner.nextInt();
+        Scanner input = new Scanner(System.in);
+       int a = input("Podaj pierwsza liczbe: ");
+       int b = input("Podaj druga liczbe: ");
+       int c = input("Podaj trzecia liczbe: ");
 
         // za pomoca biblioteki Math
         int max = Math.max(Math.max(a, b),c);
@@ -35,8 +32,17 @@ public class Exercise2 {
 //        } else {
 //            System.out.println(c + " " + b);
 //        }
+    }
 
-
+    static int input(String message){
+        try {
+            System.out.println(message);
+            Scanner scanner = new Scanner(System.in);
+            return scanner.nextInt();
+        } catch (InputMismatchException e) {
+            System.out.println(e);
+        }
+        return 0;
     }
 }
 

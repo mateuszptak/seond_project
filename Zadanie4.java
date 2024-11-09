@@ -1,4 +1,4 @@
-import java.math.BigDecimal;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Zadanie4 {
@@ -7,20 +7,17 @@ public class Zadanie4 {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Jakie działanie arytmetyczne chcesz dokonać? (+, -, *, /)");
-        // .next przyjmuje ciag znakow czyli wszystko
-        String sign = scanner.next();
+        String signMethod = calcSign("Jakie działanie arytmetyczne chcesz dokonać? (+, -, *, /)");
 
-        System.out.println("Podaj pierwsza liczbe");
-        int num1 = scanner.nextInt();
+        int num1 = input("Podaj pierwsza liczbę: ");
 
-        System.out.println("Podaj drugą liczbę");
-        int num2 = scanner.nextInt();
+        int num2 = input("Podaj druga liczbę: ");
+
         scanner.close();
 
         int result;
 
-        switch (sign) {
+        switch (signMethod) {
             case "+":
                result = num1 + num2;
                 System.out.println(result);
@@ -40,6 +37,29 @@ public class Zadanie4 {
             default:
                 System.out.println("Błędcny znak");
         }
+    }
+
+
+    static int input(String message){
+        try {
+            System.out.println(message);
+            Scanner scanner = new Scanner(System.in);
+            return scanner.nextInt();
+        } catch (InputMismatchException e) {
+            System.out.println(e);
+        }
+        return 0;
+    }
+
+    static String calcSign(String message) {
+        try {
+            System.out.println(message);
+            Scanner scanner = new Scanner(System.in);
+            return scanner.next();
+        } catch (InputMismatchException error) {
+            System.out.println(error);
+        }
+        return "";
     }
 }
 
