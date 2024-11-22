@@ -1,15 +1,18 @@
 package App;
 
+import java.util.Comparator;
+import java.util.List;
+
 class Company {
    String name;
-   Address address;
+   List<Employee> employees;
 
-    public Address getAddress() {
-        return address;
+    public void setEmployees(List<Employee> employees) {
+        this.employees = employees;
     }
 
-    public void setAddress(Address address) {
-        this.address = address;
+    public List<Employee> getEmployees() {
+        return employees;
     }
 
     public Company(String name){
