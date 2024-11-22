@@ -25,11 +25,31 @@ public class Main {
                 System.out.println("Dostepne rozmiary to (41,42,46) - podaj mi swój abym mógł Ci zaproponować konkretny model");
                 String shoesSize = scanner.nextLine();
                 if (Objects.equals(shoesSize, "41") || Objects.equals(shoesSize, "42") || Objects.equals(shoesSize, "46")) {
-                    System.out.println("Dostepne modele - Iron, Golden, Picker. Wybierz swoje:");
+                    System.out.println("Dostepne modele - Iron, Golden, Bronze. Wybierz swoje:");
+                    String shoeModel = scanner.nextLine();
+                    switch(shoeModel) {
+                        case "Iron":
+                            System.out.println("Dodać buty do koszyka?");
+                            String isStillBuying = scanner.nextLine();
+
+                            break;
+                        case "Golden":
+                            // code block
+                            break;
+                        case "Bronze":
+                            // code block
+                    }
+
                 }
             }
         }
 
+
+//        aby program dziala do momentu zmiany boolean
+//                boolean done = false;
+//        while(!done) {
+//            // kod
+//        }
 
 //        Person janTestowy = new Person("Janek", "Nawiskowy");
 //        Person maciekZKlanu = new Person("Maciej", "SKLANU");
