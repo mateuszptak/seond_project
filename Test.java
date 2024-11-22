@@ -1,9 +1,9 @@
 public class Test {
     public static void main(String[] args) {
-//        int firstNumber = Utils.input("Podaj liczbe:");
+//        int firstNumber = Exercises.Utils.input("Podaj liczbe:");
 //        System.out.println(firstNumber);
 //
-//        Utils utils = new Utils();
+//        Exercises.Utils utils = new Exercises.Utils();
 //        utils.inputINtObject("Siema, ile dasz mi szlugów?");
 //        Student student = new Student("Mateusz", "Ptak", 11);
 //        System.out.println(student);
