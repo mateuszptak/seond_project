@@ -1,27 +1,27 @@
 package App;
 
 class Address {
-    private String address;
-    private int homeNumber;
+    private String street;
+    private String city;
 
-    public Address(String adres, int homeNumber) {
-        this.address = adres;
-        this.homeNumber = homeNumber;
+    public Address(String street, String city) {
+        this.street = street;
+        this.city = city;
     }
 
-    public void setAddress(String address, int homeNumber){
-        this.address = address;
+    public String getStreet() {
+        return street;
     }
 
-    public void setHomeNumber(){
-        this.homeNumber = homeNumber;
+    public void setStreet(String street) {
+        this.street = street;
     }
 
-    public String getAdres(){
-        return address;
+    public String getCity() {
+        return city;
     }
 
-    public int getHomeNumber(){
-        return homeNumber;
+    public void setCity(String city) {
+        this.city = city;
     }
 }
